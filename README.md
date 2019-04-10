@@ -106,7 +106,7 @@ Here we list the commands for training/evaluating PointCNN on classification and
   python3 prepare_s3dis_data.py
   python3 prepare_s3dis_filelists.py
   cd ../pointcnn_seg
-  ./train_val_s3dis.sh -g 0 -x s3dis_x8_2048_fps -a 1
+  ./train_val_s3dis.sh -g 0 -x s3dis_x8_2048_fps -a 1 -l ckpt
   ./test_s3dis.sh -g 0 -x s3dis_x8_2048_fps -a 1 -l ../../models/seg/pointcnn_seg_s3dis_x8_2048_fps_xxxx/ckpts/iter-xxxxx -r 4
   cd ../evaluation
   此处已经改写为可直接运行
