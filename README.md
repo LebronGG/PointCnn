@@ -92,7 +92,7 @@ Here we list the commands for training/evaluating PointCNN on classification and
   python3 ./download_datasets.py -d shapenet_partseg
   python3 ./prepare_partseg_data.py -f ../../data/shapenet_partseg
   cd ../pointcnn_seg
-  ./train_val_shapenet.sh -g 0 -x shapenet_x8_2048_fps
+  ./train_val_shapenet.sh -g 0 -x shapenet_x8_2048_fps -l load_ckpt
   ./test_shapenet.sh -g 0 -x shapenet_x8_2048_fps -l ../../models/seg/pointcnn_seg_shapenet_x8_2048_fps_xxxx/ckpts/iter-xxxxx -r 10
   cd ../evaluation
   python3 eval_shapenet_seg.py -g ../../data/shapenet_partseg/test_label -p ../../data/shapenet_partseg/test_data_pred_10 -a
